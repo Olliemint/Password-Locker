@@ -10,7 +10,7 @@ class User:
     def __init__(self,username,password):
         
         """
-        method that defines properties of the objects and we can pass the Args
+        method that defines user attributes and we can pass the Args
         """
         
         self.username = username
