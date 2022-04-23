@@ -23,5 +23,16 @@ def main():
             print("Confirm your Password")
             confirm_password = input()
             
+            while confirm_password != entered_password:
+                print("Your password did not match")
+                print("Enter your password again")
+                entered_password = input()
+                print("Confirm Your password")
+                confirm_password = input()
+                
+            else:
+                print(f"Hurray {entered_username} your account was created successfully")
+                    
+            
             
         
