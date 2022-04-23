@@ -32,6 +32,66 @@ def main():
                 
             else:
                 print(f"Hurray {entered_username} your account was created successfully")
+                print('\n')
+                print("Continue to Login")
+                print("Enter your Username")
+                entered_user_name = input()
+                print("Enter Password")
+                entered_user_password = input()
+                
+                
+            while entered_user_name != entered_username or entered_user_password != entered_password:
+                print("Your Username or Password is invalid")
+                print("Re-enter your Username")
+                entered_user_name = input()
+                print("Enter your Password")
+                entered_user_password = input()
+                
+            else:
+                print(f"Welcome {entered_user_name} you've logged in succesfully")
+                print("\n")   
+                
+        elif shortcode == 'LG':
+            print("Welcome, Login to your Account")
+            print("Enter your Username")
+            default_username = input()
+
+            
+            print("Enter Passwprd")
+            default_password = input()
+            print("\n")
+            
+            while default_username != "user001" or default_password != "2580":
+                 print("Invalid username or password. Username is 'user001' and Password is '2580'")
+                 print("Enter your Username")
+                 default_username = input()
+                 print("Enter Password")
+                 default_password = input()
+                 
+            else:
+                print("Logged in Succesfully")
+                
+                print("\n")   
+                
+        
+        elif shortcode == 'EX':
+            break
+        
+        else:
+            
+            print("Pick valid shortcode to continue")  
+            
+            
+            
+if __name__ == '_main_':
+    main()                  
+                  
+            
+            
+
+                     
+                
+                    
                     
             
             
