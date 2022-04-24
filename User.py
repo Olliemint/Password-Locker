@@ -45,22 +45,30 @@ class User:
         return cls.user_list
     
     
-    @classmethod 
-    def find_user_details(cls,string):
+    # def find_user_details(cls,string):
         
         
-        '''
-        Method that takes in a string and returns a username that matches that string.
+    #     '''
+    #     Method that takes in a string and returns a username that matches that string.
 
-        Args:
-            string: username to search for
-        Returns :
-            username of person that matches the string.
+    #     Args:
+    #         string: username to search for
+    #     Returns :
+    #         username of person that matches the string.
             
-        '''
-        for user in cls.user_list:
-            if user.username == string:
-                return user
+    #     '''
+    #     for User in cls.user_list:
+    #         if User.username == string:
+    #             return User
+            
+            
+    # @classmethod
+    # def copy_data(cls,string):
+    #     username_found = User.find_user_details()
+    #     pyperclip.copy(username_found.username)  
+        
+         
+    #     pyperclip.copy(username_found.password)        
    
         
        

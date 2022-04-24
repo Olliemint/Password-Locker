@@ -1,3 +1,6 @@
+from crypt import methods
+
+
 class Credentials:
     
     """
@@ -27,6 +30,16 @@ class Credentials:
         saves user objects to user_list
         """ 
         Credentials.credentials_list.append(self)
+        
+        
+    def delete_credentials(self):
+        
+        
+        Credentials.credentials_list.remove(self)  
+        
+        
+        
+    @classmethod   
         
         
             
