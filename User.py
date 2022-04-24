@@ -1,4 +1,4 @@
-
+import pyperclip
 
 
 class User:
@@ -43,6 +43,26 @@ class User:
         '''
         
         return cls.user_list
+    
+    
+    @classmethod 
+    def copy_user_details(cls,string):
+        
+        
+        '''
+        Method that takes in a string and returns a username that matches that string.
+
+        Args:
+            string: username to search for
+        Returns :
+            username of person that matches the string.
+            
+        '''
+        for user in cls.user_list:
+            if user.username == string:
+                return user
+   
+        
        
                 
         

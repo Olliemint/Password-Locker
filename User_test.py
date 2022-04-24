@@ -87,6 +87,15 @@ class TestUser(unittest.TestCase):
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list),1)
         
+        
+    def test_view_user_details(self):
+        
+        '''
+        method that returns a list of all contacts saved
+        '''
+        
+        self.assertEqual(User.view_user_details(),User.user_list)    
+        
          
         
         
