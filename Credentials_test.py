@@ -43,6 +43,71 @@ class TestCredentials(unittest.TestCase):
         
         
         
+    def test_add_credentials(self):
+        
+        """
+        test case if we can add new user
+        
+        """ 
+        
+        self.new_credentials.add_credentials()
+        
+        self.assertEqual(len(Credentials.credentials_list),1)  
+        
+        
+        
+    def test_add_multiple_credentials(self):
+        
+        """
+        test case if we can add multiple credentials
+        
+        """ 
+        
+        self.new_credentials.add_credentials()
+        
+        test_credentials = Credentials("Pixabay","Fury","2233")  
+        
+        test_credentials.add_credentials()
+        
+        self.assertEqual(len(Credentials.credentials_list),2) 
+        
+        
+        
+        
+    def test_delete_credentials(self):
+        
+        """
+        test case to check if we can delete user credentiials
+        
+        """ 
+        
+        self.new_credentials.add_credentials()
+        
+        test_credentials = Credentials("Pixabay","Fury","2233")  
+        
+        test_credentials.add_credentials()
+        
+        self.new_credentials.delete_credentials()
+        
+        self.assertEqual(len(Credentials.credentials_list),1)
+        
+        
+        
+    def test_view_credentials(self):
+        
+        """
+        test case to check if we can view user credentials
+        
+        """  
+        
+        
+        self.assertEqual(Credentials.view_credentials(),Credentials.credentials_list)  
+        
+        
+           
+        
+        
+        
         
         
         

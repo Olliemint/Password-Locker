@@ -39,7 +39,19 @@ class Credentials:
         
         
         
-    @classmethod   
+    @classmethod 
+    
+    def view_credentials(cls):
+        
+        
+        """"
+        method to view user credentials
+        
+        """
+        
+        return cls.credentials_list
+        
+          
         
         
             
