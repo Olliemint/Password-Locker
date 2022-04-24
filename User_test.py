@@ -94,7 +94,25 @@ class TestUser(unittest.TestCase):
         method that returns a list of all contacts saved
         '''
         
-        self.assertEqual(User.view_user_details(),User.user_list)    
+        self.assertEqual(User.view_user_details(),User.user_list) 
+        
+        
+    def test_find_user_details(self):
+        '''
+        test to check if we can find a contact by phone number and display information
+        '''
+        
+        self.new_user.add_new_user()
+        
+        test_user = User("Test101","5656")
+        
+        test_user.add_new_user()
+        
+        found_username = User.find_user_details("Test101")
+        
+        self.assertEqual(found_username.password,test_user.password)
+        
+               
         
          
         

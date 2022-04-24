@@ -46,7 +46,7 @@ class User:
     
     
     @classmethod 
-    def copy_user_details(cls,string):
+    def find_user_details(cls,string):
         
         
         '''
