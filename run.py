@@ -3,7 +3,9 @@
 
 import random
 
-import User
+from User import User
+
+import Credentials
 
 def create_user(username,password):
     new_user = User(username,password)
@@ -11,9 +13,31 @@ def create_user(username,password):
     return new_user
 
 
-def add_new(user1):
+def add_new(User):
     
-    user1.add_new_user()
+    
+    """
+    function to add user
+    """
+    
+    User.add_new_user()
+    
+    
+    
+def delete_users(User):
+    
+    """
+    function to delete user
+    
+    """
+    
+    User.delete_user() 
+    
+    
+    
+def display_user_details(User):
+    
+    return User.view_user_details()      
     
     
     
