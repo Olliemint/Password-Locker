@@ -40,7 +40,11 @@ def delete_users(User):
     
 def display_user_details():
     
-    return User.view_user_details()      
+    return User.view_user_details() 
+
+
+
+     
     
 #   class credentials functions
 
@@ -75,9 +79,14 @@ def remove_credentials(Credentials):
     
     
     
-def check_credentials():
+def view_credentials():
     
-    return Credentials.view_credentials()    
+    return Credentials.view_credentials()
+
+
+# def mygenerated_password(Credentials):
+    
+#     Credentials.generate_password()    
     
      
     
@@ -86,7 +95,7 @@ def check_credentials():
       
     
   
-    
+
     
 
 def main():
@@ -94,9 +103,13 @@ def main():
     while True:
         print("Welcome to Password-Locker")
         print('\n')
-        print("Please select a short code to cruise through:To create new user use 'NU': For logging in to your account use 'LG':And finally to exit use 'EX'")
+        print("Please select a short code to cruise through:To create new user use 'NU': For logging in to your account use 'LG':To view Your details use 'VW':And finally to exit use 'EX'")
+        print("To store existing tutorials use 'CS'")
         shortcode = input().upper()
         print('\n')
+        
+        
+       
         
         
         if shortcode == 'NU':
@@ -109,6 +122,8 @@ def main():
             
             print("Confirm your Password")
             confirm_password = input()
+            
+            
             
             while confirm_password != entered_password:
                 print("Your password did not match")
@@ -136,7 +151,49 @@ def main():
                 
             else:
                 print(f"Welcome {entered_user_name} you've logged in succesfully")
-                print("\n")   
+                print("\n") 
+                
+                
+                
+            add_new(create_user(entered_user_name,entered_password))
+                  
+                
+                
+        elif shortcode == 'CS':
+            print("New Credentials")
+            
+            print("\n")
+            
+            print("Enter Account Name:")
+            a_name = input()
+            
+            print("Enter Username:")
+            u_name = input()
+            
+            print("To type Account password type 'TP':To let the system generate for you type 'GP':")
+            code = input().upper()
+            
+            if code == 'TP':
+                print("Enter Account Password:")
+                
+                a_password = input()
+            elif code == 'GP':
+                
+                a_password = Credentials.generate_password(6) 
+                
+                print(f"Generated password is: {a_password} ")
+                   
+            
+            # a_password = input()
+            
+            more_credentials(new_credentials(a_name,u_name,a_password))
+            print("\n")
+            print(f"New Credentials {a_name} {u_name} {a_password}")
+
+            print("\n")
+            
+            
+            
                 
         elif shortcode == 'LG':
             print("Welcome, Login to your Account")
@@ -158,8 +215,29 @@ def main():
             else:
                 print("Logged in Succesfully")
                 
-                print("\n")   
+                print("\n") 
                 
+        elif shortcode == 'VW':
+            
+            
+           
+           
+            
+            if display_user_details():
+                
+                print("Here is a List of your User Data")
+                
+                print("\n") 
+                
+                for User in display_user_details():
+                    print(f"{User.username}  {User.password}")
+                    
+                    print("\n")          
+                
+            else:
+                print("\n")
+                print("Your dont have stored User Data yet. Please save and check again")
+                print("\n")
         
         elif shortcode == 'EX':
             break

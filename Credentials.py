@@ -1,4 +1,4 @@
-from crypt import methods
+import random
 
 
 class Credentials:
@@ -35,7 +35,21 @@ class Credentials:
     def delete_credentials(self):
         
         
-        Credentials.credentials_list.remove(self)  
+        Credentials.credentials_list.remove(self)
+        
+        
+        
+    def generate_password(self):
+        
+        characters = "01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ&*(){}[]|/\?!@#$%^abcdefghijklmnopqrstuvwxyz"
+        
+        password_length = 6
+        
+        password = "".join(random.sample(characters, password_length))
+        
+        return password
+        
+              
         
         
         
