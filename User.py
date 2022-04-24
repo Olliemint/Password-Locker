@@ -32,6 +32,18 @@ class User:
         
     def delete_user(self):
         
-        User.user_list.remove(self)    
+        User.user_list.remove(self)
+        
+    @classmethod 
+    def view_user_details(cls):
+        
+        
+        '''
+        method that returns the user list
+        '''
+        
+        return cls.user_list
+       
+                
         
         
