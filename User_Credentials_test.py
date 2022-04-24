@@ -70,6 +70,26 @@ class TestUser(unittest.TestCase):
         self.assertEqual(len(User.user_list),2) 
         
         
+        
+    def test_delete_contact(self):
+        
+        """
+        testing id we can delete user
+        
+        """ 
+        
+        self.new_user.add_new_user()
+        
+        test_user = User("Test101","5656")
+        
+        test_user.add_new_user()
+        
+        self.new_user.delete_user()
+        self.assertEqual(len(User.user_list),1)
+        
+         
+        
+        
              
         
         
