@@ -8,7 +8,7 @@ class Credentials:
     credentials_list = []
     
     
-    def __init__(self,account_name,Pass_word):
+    def __init__(self,account_name,user_name,Pass_word):
         
         
         """
@@ -16,7 +16,20 @@ class Credentials:
         """
         
         self.account_name = account_name
+        self.user_name = user_name
         self.Pass_word = Pass_word
+        
+        
+        
+    def add_credentials(self):
+        
+        """
+        saves user objects to user_list
+        """ 
+        Credentials.credentials_list.append(self)
+        
+        
+            
         
         
         
