@@ -5,7 +5,10 @@ import random
 
 from User import User
 
-import Credentials
+from Credentials import Credentials
+
+
+# Class user functions
 
 def create_user(username,password):
     new_user = User(username,password)
@@ -35,11 +38,52 @@ def delete_users(User):
     
     
     
-def display_user_details(User):
+def display_user_details():
     
     return User.view_user_details()      
     
+#   class credentials functions
+
+
+def new_credentials(account_name,user_name,Pass_word):
     
+    new_credentials = Credentials(account_name,user_name,Pass_word)
+    
+    return new_credentials
+
+
+
+def more_credentials(Credentials):
+    
+    """
+    function to save credentials
+    """
+    
+    Credentials.add_credentials()
+    
+    
+    
+def remove_credentials(Credentials):
+    
+    """
+    function to delete credentials
+    
+    """  
+    
+    Credentials.delete_credentials() 
+    
+    
+    
+    
+def check_credentials():
+    
+    return Credentials.view_credentials()    
+    
+     
+    
+    
+    
+      
     
   
     
