@@ -55,6 +55,21 @@ class TestUser(unittest.TestCase):
         self.assertEqual(len(User.user_list),1)
         
         
+    def test_add_multiple_users(self):
+        
+        """
+        check if we can save multiple user data
+        """   
+        
+        self.new_user.add_new_user()
+        
+        test_user = User("Test101","5656")
+        
+        test_user.add_new_user()
+        
+        self.assertEqual(len(User.user_list),2) 
+        
+        
              
         
         

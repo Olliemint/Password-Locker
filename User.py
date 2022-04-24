@@ -1,3 +1,6 @@
+from requests import delete
+
+
 class User:
     """
     class to generate objects/new instance of User
@@ -24,5 +27,11 @@ class User:
         """   
         
         User.user_list.append(self) 
+        
+        
+        
+    def delete_user(self):
+        
+        User.user_list.remove(self)    
         
         
