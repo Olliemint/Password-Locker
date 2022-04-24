@@ -1,6 +1,20 @@
+#!/usr/bin/env python3.8
+
+
 import random
 
 import User
+
+def create_user(username,password):
+    new_user = User(username,password)
+    
+    return new_user
+
+
+def add_new(user1):
+    
+    user1.add_new_user()
+    
 
 def main():
     
@@ -82,9 +96,9 @@ def main():
             print("Pick valid shortcode to continue")  
             
             
-            
-if __name__ == '_main_':
-    main()                  
+if __name__ == '__main__':
+
+    main()                                 
                   
             
             
