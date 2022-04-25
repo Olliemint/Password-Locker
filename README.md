@@ -27,7 +27,7 @@
   - Then the system should create and save the credentials
 
 
-- ####Display Credential
+- #### Display Credential
    - Given that a user has credentials saved
    - When a user requests to see the details of saved credentials
    - Then the system should return all saved credentials
@@ -55,7 +55,7 @@ This is an application that helps users manage their password by saving them in 
 
 To run the application, in your terminal:
 
-- <code>$ #!/usr/bin/env python3.9 or your python version</code>
+- <code>$ #!/usr/bin/env python3.8 or your python version</code>
 
 - <code>$ chmod +x run.py</code>
 
@@ -63,9 +63,7 @@ To run the application, in your terminal:
 
 ## Technology Use
 
-- Python3.9
-
-- Pyperclip
+- Python3.8
 
 - pip3
 
@@ -83,8 +81,8 @@ To run the application, in your terminal:
 
 ## Authors Info
 
--LinkedIn - [Charity Nyanchera](https://www.linkedin.com/in/charity-nyanchera-2679281a2/)
+-LinkedIn - []()
 
--twitter - [Twitter](https://twitter.com/CcNyanchera)
+-twitter - [Twitter]()
 
--[Go Back to the top](#password_locker)
+-[Go Back to the top](#Password-Locker)
