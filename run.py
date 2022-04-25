@@ -101,12 +101,13 @@ def view_credentials():
 def main():
     
     while True:
+      
         print("Welcome to Password-Locker")
-        print('\n')
-        print("Please select a short code to cruise through:To create new user use 'NU': For logging in to your account use 'LG':To view Your details use 'VW':And finally to exit use 'EX'")
-        print("To store existing tutorials use 'CS'")
-        shortcode = input().upper()
-        print('\n')
+        
+        print("\n")
+        print("Create new user 'NU':To login 'LG':View details 'VW':To delete details 'DL':To exit 'EX'")
+        shortcode = input("Enter your choice:").upper()
+        
         
         
        
@@ -151,12 +152,18 @@ def main():
                 
             else:
                 print(f"Welcome {entered_user_name} you've logged in succesfully")
-                print("\n") 
+                print("\n")
+           
+                    
+                     
                 
                 
                 
             add_new(create_user(entered_user_name,entered_password))
                   
+             
+        
+            print("To store existing Accounts Credentials use 'CS'")    # print("To store existing Accounts Credentials use 'CS'")
                 
                 
         elif shortcode == 'CS':
@@ -198,24 +205,31 @@ def main():
         elif shortcode == 'LG':
             print("Welcome, Login to your Account")
             print("Enter your Username")
-            default_username = input()
+            a_name = input("a_name")
 
             
             print("Enter Passwprd")
-            default_password = input()
+            a_password = input("a_password")
             print("\n")
             
-            while default_username != "user001" or default_password != "2580":
-                 print("Invalid username or password. Username is 'user001' and Password is '2580'")
+            while a_name != a_password or a_password != a_password:
+                 print("Invalid username or password.")
                  print("Enter your Username")
-                 default_username = input()
+                 a_name = input("a_name")
                  print("Enter Password")
-                 default_password = input()
+                 a_password = input("a_password")
                  
             else:
                 print("Logged in Succesfully")
                 
-                print("\n") 
+                print("\n")
+            
+            # if a_name == a_name:
+                
+            #     print(f" hello {a_name}")    
+                
+                
+                 
                 
         elif shortcode == 'VW':
             
