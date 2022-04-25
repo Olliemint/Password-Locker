@@ -11,6 +11,9 @@
 - [Licence](#licence)
 - [Authors Info](#author-Info)
 
+## Description
+
+This is an application that helps users manage their password by saving them in Password-Locker
 
 ## Behavior Driven Enviroment
 
@@ -39,9 +42,6 @@
    - Then the system should delete the account
 
 
-## Description
-
-This is an application that helps users manage their password by saving them in Password-Locker
 
 ## Installation
 
