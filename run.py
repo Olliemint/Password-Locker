@@ -100,170 +100,232 @@ def view_credentials():
 
 def main():
     
-    while True:
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+#     while True:
       
-        print("Welcome to Password-Locker")
+#         print("Welcome to Password-Locker")
         
-        print("\n")
-        print("Create new user 'NU':To login 'LG':View details 'VW':To delete details 'DL':To exit 'EX'")
-        shortcode = input("Enter your choice:").upper()
+#         print("\n")
+#         print("Create new user 'NU':To login 'LG':To delete details 'DL':To exit 'EX'")
+#         shortcode = input("Enter your choice:").upper()
         
-        
-        
-       
-        
-        
-        if shortcode == 'NU':
+#         if shortcode == 'NU':
             
-            print("Create your Username:")
-            entered_username = input()
+#             print("Create your Username:")
+#             entered_username = input()
             
-            print("Create your Password")
-            entered_password = input()
+#             print("Create your Password")
+#             entered_password = input()
             
-            print("Confirm your Password")
-            confirm_password = input()
+#             print("Confirm your Password")
+#             confirm_password = input()
             
             
             
-            while confirm_password != entered_password:
-                print("Your password did not match")
-                print("Enter your password again")
-                entered_password = input()
-                print("Confirm Your password")
-                confirm_password = input()
+#             while confirm_password != entered_password:
+#                 print("Your password did not match")
+#                 print("Enter your password again")
+#                 entered_password = input()
+#                 print("Confirm Your password")
+#                 confirm_password = input()
                 
-            else:
-                print(f"Hurray {entered_username} your account was created successfully")
-                print('\n')
-                print("Continue to Login")
-                print("Enter your Username")
-                entered_user_name = input()
-                print("Enter Password")
-                entered_user_password = input()
+#             else:
+#                 print(f"Hurray {entered_username} your account was created successfully")
+#                 print('\n')
+#                 # print("Continue to Login")
+#                 # print("Enter your Username")
+#                 # entered_username = input()
+#                 # print("Enter Password")
+#                 # entered_user_password = input()
+#             add_new(create_user(entered_username,entered_password))    
                 
+#             # while entered_user_name != entered_username or entered_user_password != entered_password:
+#             #     print("Your Username or Password is invalid")
+#             #     print("Re-enter your Username")
+#             #     entered_user_name = input()
+#             #     print("Enter your Password")
+#             #     entered_user_password = input()
                 
-            while entered_user_name != entered_username or entered_user_password != entered_password:
-                print("Your Username or Password is invalid")
-                print("Re-enter your Username")
-                entered_user_name = input()
-                print("Enter your Password")
-                entered_user_password = input()
+#             # else:
+#             #     print(f"Welcome {entered_user_name} you've logged in succesfully")
+#             #     print("\n")
                 
-            else:
-                print(f"Welcome {entered_user_name} you've logged in succesfully")
-                print("\n")
            
-                    
-                     
                 
-                
-                
-            add_new(create_user(entered_user_name,entered_password))
-                  
-             
-        
-            print("To store existing Accounts Credentials use 'CS'")    # print("To store existing Accounts Credentials use 'CS'")
-                
-                
-        elif shortcode == 'CS':
-            print("New Credentials")
-            
-            print("\n")
-            
-            print("Enter Account Name:")
-            a_name = input()
-            
-            print("Enter Username:")
-            u_name = input()
-            
-            print("To type Account password type 'TP':To let the system generate for you type 'GP':")
-            code = input().upper()
-            
-            if code == 'TP':
-                print("Enter Account Password:")
-                
-                a_password = input()
-            elif code == 'GP':
-                
-                a_password = Credentials.generate_password(6) 
-                
-                print(f"Generated password is: {a_password} ")
-                   
-            
-            # a_password = input()
-            
-            more_credentials(new_credentials(a_name,u_name,a_password))
-            print("\n")
-            print(f"New Credentials {a_name} {u_name} {a_password}")
-
-            print("\n")
-            
             
             
                 
-        elif shortcode == 'LG':
-            print("Welcome, Login to your Account")
-            print("Enter your Username")
-            a_name = input("a_name")
+#         elif shortcode == 'LG':
+#             print("Welcome, Login to your Account")
+#             print("Enter your Username")
+#             a_name = input("Username:")
 
             
-            print("Enter Passwprd")
-            a_password = input("a_password")
-            print("\n")
+#             print("Enter Passwprd")
+#             a_password = input("Password:")
+#             print("\n")
             
-            while a_name != a_password or a_password != a_password:
-                 print("Invalid username or password.")
-                 print("Enter your Username")
-                 a_name = input("a_name")
-                 print("Enter Password")
-                 a_password = input("a_password")
+#             while a_name != entered_username or a_password !=entered_password:
+#                  print("Invalid username or password.")
+#                  print("Enter your Username")
+#                  a_name = input("Username:")
+#                  print("Enter Password")
+#                  a_password = input("Password")
                  
-            else:
-                print("Logged in Succesfully")
+#             else:
+#                 print("Logged in Succesfully")
                 
-                print("\n")
+#                 print("\n")
             
-            # if a_name == a_name:
+#             while True:
                 
-            #     print(f" hello {a_name}")    
+#                 print("Use the short codes to navigate:'NC' Create new credentials: 'SA' Save existing credentials: 'VW' View Credntials:'EX' To exit")
+                
+#                 p_code = input("Enter short code:").upper()
+                
+                
+#                 if p_code == 'NC':
+                    
+#                     print("Create Acount Credentials")
+                    
+#                     print("__"*20)
+                    
+#                     print("Enter Acount Name")
+#                     C_name = input()
+                    
+#                     print("\n")
+#                     print("Enter Username")
+                    
+#                     C_usern = input()
+                    
+#                     while True:
+#                         print("TP - to type your own password")
+#                         print("GP -random generated password")
+                        
+#                         p_word = input("Enter shortcode")
+                        
+#                         if p_word == 'TP':
+                            
+#                             print("Enter Password")
+#                             print("\n")
+
+#                             C_pass = input()
+#                         elif p_word == 'GP':
+                            
+#                             C_pass = Credentials.generate_password(6) 
+                            
+#                         else:
+#                             print("Invalid short code, choose either TP or GP")
+                            
+                            
+#                         more_credentials(new_credentials(C_name,C_usern,C_pass)) 
+                            
+                            
+                
+#                 # print("")       
+                            
+#                 elif shortcode == 'SA':
+                    
+#                     print("Save Acount Credentials")
+                    
+#                     print("__"*20)
+                    
+#                     print("Enter Acount Name:")
+#                     S_name = input("Account name:")
+                    
+#                     print("\n")
+#                     print("Enter Account Username: ")
+#                     S_usern = input("Username:")
+#                     print("\n")
+                    
+#                     print("Enter Account Password:")
+#                     S_pass = input("Password:")
+                    
+#                     print("\n")
+                    
+#                     more_credentials(new_credentials(S_name,S_usern,S_pass))
+                    
+#                 elif shortcode == 'VW':
+                    
+#                     if view_credentials():
+                        
+#                         print("Here is Credentials List")
+                        
+#                         for Credentials in view_credentials():
+                            
+#                             print("Account Name     Username      Password")
+#                             print("*"*20)
+                            
+#                             print(f" {Credentials.account_name}     {Credentials.user_name}     {Credentials.Pass_word}")
+#                             print("\n")
+                    
+                    
+#                     else:
+#                         print("You dont have any Saved Credentials yet")        
+                            
+                            
+                            
+                    
+                        
+                    
+#                 elif shortcode == 'EX':
+                    
+#                     print("You've exited Credentials section")
+                    
+#                     break
+                
+#                 else:
+                    
+#                     print("Please enter a valid code")    
                 
                 
                  
                 
-        elif shortcode == 'VW':
+#         # elif shortcode == 'VW':
             
             
            
            
             
-            if display_user_details():
+#         #     if display_user_details():
                 
-                print("Here is a List of your User Data")
+#         #         print("Here is a List of your User Data")
                 
-                print("\n") 
+#         #         print("\n") 
                 
-                for User in display_user_details():
-                    print(f"{User.username}  {User.password}")
+#         #         for User in display_user_details():
+#         #             print(f"{User.username}  {User.password}")
                     
-                    print("\n")          
+#         #             print("\n")          
                 
-            else:
-                print("\n")
-                print("Your dont have stored User Data yet. Please save and check again")
-                print("\n")
+#         #     else:
+#         #         print("\n")
+#         #         print("Your dont have stored User Data yet. Please save and check again")
+#         #         print("\n")
         
-        elif shortcode == 'EX':
-            break
+#         elif shortcode == 'EX':
+#             break
         
-        else:
+#         else:
             
-            print("Pick valid shortcode to continue")  
+#             print("Pick valid shortcode to continue")  
             
             
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    main()                                 
+#     main()                                 
                   
             
             
