@@ -1,5 +1,7 @@
 # Password-Locker
 
+# By Oliver Maiyo
+
 ## Table of Content
 
 - [Description](#description)
@@ -39,15 +41,13 @@
 
 ## Description
 
-This is an application that helps users manage their password by saving them in here
+This is an application that helps users manage their password by saving them in Password-Locker
 
 ## Installation
 
 - Open Terminal - Ctrl+Alt+T
 
-- git clone ```https://github.com/charity-bit/password_locker```
-
-- cd password_locker
+- git clone ```https://github.com/Olliemint/Password-Locker.git```
 
 - open vs code with <code>code .</code>
 
@@ -71,18 +71,18 @@ To run the application, in your terminal:
 
 1. official python documentation <a href="https://docs.python.org/3/">docs</a>
 
-2. Programiz.com <a href="https://www.programiz.com/python-programming">here</a>
+2. GeekFlare<a href="https://geekflare.com/password-generator-python-code/">here</a>
 
-3. Moringa School official content
+3. official flask documentation <a href="https://flask.palletsprojects.com/en/2.1.x/">docs</a>
 
 ## Licence
 
-   copyright © Charity 2022 - <a href="https://github.com/charity-bit/password_locker/blob/main/LICENSE">MIT</a>
+   copyright © Oliver Maiyo 2022 
 
 ## Authors Info
 
--LinkedIn - []()
+-LinkedIn - [Oliver Maiyo](https://www.linkedin.com/in/oliver-maiyo-191943225/)
 
--twitter - [Twitter]()
+-twitter - [@Furymint](https://twitter.com/Furymint)
 
 -[Go Back to the top](#Password-Locker)
