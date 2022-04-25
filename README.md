@@ -13,7 +13,7 @@
 
 ## Description
 
-This is an application that helps users manage their password by saving them in Password-Locker
+Password-Locker allow users to create and account and let them stores user passwords for different sites and can also generates random passwords for them once they log in
 
 ## Behavior Driven Enviroment
 
