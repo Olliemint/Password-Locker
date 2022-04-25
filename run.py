@@ -100,14 +100,145 @@ def view_credentials():
 
 def main():
     
+    while True:
+        print("Welcome to PassWord-Locker.")
+        print('\n')
+        print("Use these short codes to navigate through: Create New User use 'nw' and 'ex' To exit Password-Locker")
+        shortcode = input().lower()
+        print('\n')
+        
+        if shortcode == 'nw':
+        
+            print("Create your Username:")
+            entered_username = input()
+            
+            print("Create your Password")
+            entered_userpassword = input()
+            
+            print("Confirm your Password")
+            confirm_password = input()
+            
+            while confirm_password != entered_userpassword:
+                print("Sorry your passwords did not match!")
+                print("Enter a password")
+                entered_userpassword  = input()
+                print("Confirm Your Password")
+                confirm_password = input()
+            else:
+                print(f"Congratulations {entered_username}! You have created your new account.")
+                print('\n')
+                print("Proceed to Log In to your Account")
+                print("Username")
+                entered_username = input()
+                print("Your Password")
+                entered_password = input()
+            while entered_username != entered_username or entered_password != entered_userpassword:
+                print("Invalid username or password")
+                print("Username")
+                entered_username = input()
+                print("Your Password")
+                entered_password = input()
+            else:
+                print(f"Welcome: {entered_username},login scuccesfull")
+                
+                print('\n')
+            add_new(create_user(entered_username,entered_userpassword))
+        
+            while True:
+                print("Choose a shortcode: nc -create New Credentials,sc - save existing, vc -view credentials,dl -To delete and ex -exit ")
+                picked_code = input("Enter code:").lower()
+                
+                if picked_code == 'nc':
+                    
+                    print("Enter New Credentials")
+                    print("-"*20)
+                    A_name = input("Enter Account Name:")
+                    print("\n")
+                    A_user = input("Enter Username:")
+                    print("\n")
+                    
+                    while True:
+                        print("tp - To type your own Password")
+                        print("gp - To generate random Password")
+                        sel_code = input("Enter code choice:").lower()
+                        
+                        if sel_code == 'tp':
+                            print("Enter password:")
+                            A_pass = input("Password:")
+                        elif sel_code == 'gp':
+                            A_pass = Credentials.generate_password(6)
+                            print(f"Generated password is:{A_pass}")
+                            
+                            print("\n")
+                            
+                            break
+                        else:
+                            print("Invalid code,Enter provided codes")
+                            
+                    more_credentials(new_credentials(A_name,A_user,A_pass))        
+                
+                elif sel_code == 'sc':
+                    print("Enter Existing credentials ")
+                    print("-"*20)
+                    print("Enter Account Name:")
+                    a_name = input("Account name:")
+                    print("\n")
+                    print("Enter Username:") 
+                    a_user = input("Username:")   
+                    print("\n")
+                    print("Enter Password:")
+                    a_pass = input("Password:")
+                    print("\n")
+                    
+                    more_credentials(new_credentials(a_name,a_user,a_pass))
+                    break
+                
+                elif sel_code == 'vc':
+                    if view_credentials():
+                        print("Credentials List") 
+                        print("*"*20)
+                        for Credentials in view_credentials():
+                            print("Account Name  Account Username  Account Password")
+                            print("_"*30)
+                            print(f"{Credentials.account_name}  {Credentials.user_name}  {Credentials.Pass_word}")
+                    
+                    else:
+                        print("🥵You dont have saved credentials")
+                
+                elif sel_code == 'dl':
+                    print("To delete type y/n")
+                    delete = input().lower()
+                    
+                    if delete == 'y':
+                        
+                        remove_credentials(Credentials.credentials_list)
+                        break
+                    else:
+                        print("Oops you dont have and credentials saved")
+                        break
+                elif sel_code == 'ex':
+                    print("🔚Goodbye, you;ve exited Credentials Account")
+                    break
+                
+                else:
+                    print("😟 Please select a valid shortcode") 
+                    
+                    
+                
+        elif shortcode == 'ex':
+            print("🔚Goodbye, you have exited Password-Locker")
+            break
+        
+        else:
+            print("😟 Please select a valid shortcode")
+             
+
+
+
     
-    
-    
-    
-    
-    
-    
-    
+if __name__ == '__main__':
+
+    main()    
     
     
     
@@ -210,29 +341,32 @@ def main():
                     
 #                     C_usern = input()
                     
-#                     while True:
-#                         print("TP - to type your own password")
-#                         print("GP -random generated password")
+                    
+#                     print("TP - to type your own password")
+#                     print("GP -random generated password")
+                    
+#                     p_word = input("Enter shortcode")
+                    
+#                     if p_word == 'TP':
                         
-#                         p_word = input("Enter shortcode")
-                        
-#                         if p_word == 'TP':
-                            
-#                             print("Enter Password")
-#                             print("\n")
+#                         print("Enter Password")
+#                         print("\n")
 
-#                             C_pass = input()
-#                         elif p_word == 'GP':
-                            
-#                             C_pass = Credentials.generate_password(6) 
-                            
-#                         else:
-#                             print("Invalid short code, choose either TP or GP")
-                            
-                            
-#                         more_credentials(new_credentials(C_name,C_usern,C_pass)) 
-                            
-                            
+#                         C_pass = input()
+#                     elif p_word == 'GP':
+                        
+#                         C_pass = Credentials.generate_password(6) 
+                        
+#                         break
+                        
+#                     else:
+#                         print("Invalid short code, choose either TP or GP")
+                        
+#                         break
+                        
+#                     more_credentials(new_credentials(C_name,C_usern,C_pass)) 
+                        
+                        
                 
 #                 # print("")       
                             
@@ -328,12 +462,3 @@ def main():
 #     main()                                 
                   
             
-            
-
-                     
-                
-                    
-                    
-            
-            
-        
