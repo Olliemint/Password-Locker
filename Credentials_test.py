@@ -42,7 +42,7 @@ class TestCredential(unittest.TestCase):
         
         '''
         self.new_cred.save_creds()
-        test_cred = Credentials("facebook","CcNyanchera","qwertyip")
+        test_cred = Credentials("facebook","jj101","22333")
         test_cred.save_creds()
         test_cred.remove_cred()
         self.assertEqual(len(Credentials.creds_list),1)
@@ -52,33 +52,33 @@ class TestCredential(unittest.TestCase):
         unittest to test if a credential has been updated successfully
         '''
         self.new_cred.save_creds()
-        self.new_cred.password = "QWERTYIP"
-        self.new_cred.username = "charity"
+        self.new_cred.password = "jj101"
+        self.new_cred.username = "22333"
         self.new_cred.save_creds()
-        self.assertEqual(self.new_cred.password,"QWERTYIP")
-        self.assertEqual(self.new_cred.username,"charity")
-        self.assertEqual(self.new_cred.site_name,"twitter")
+        self.assertEqual(self.new_cred.password,"f1001")
+        self.assertEqual(self.new_cred.username,"Furymint")
+        self.assertEqual(self.new_cred.site_name,"Pintrest")
         
     def test_save_multiple_creds(self):
         '''
         unittest to test if a user can save multiple credentials
         '''
         self.new_cred.save_creds()
-        test_cred1= Credentials("facebook","CcNyanchera","qwertyip")
-        test_cred2 = Credentials("Instagram","CcNyanchera","qwertyip")
+        test_cred1= Credentials("facebook","jj","22333")
+        test_cred2 = Credentials("Instagram","jj101","2233")
         test_cred1.save_creds()
         test_cred2.save_creds()
-        self.assertEquals(len(Credentials.creds_list),3)
+        self.assertEqual(len(Credentials.creds_list),3)
         
     def test_search_cred(self):
         '''
         test to check if we can find a contact by name
         '''
         self.new_cred.save_creds()
-        test_cred= Credentials("facebook","CcNyanchera","qwertyip")
+        test_cred= Credentials("facebook","jj","22333")
         test_cred.save_creds()
         found_cred = Credentials.search_cred("facebook")
-        self.assertEquals(found_cred.password,test_cred.password)
+        self.assertEqual(found_cred.password,test_cred.password)
         
         
 
