@@ -68,6 +68,9 @@ To run the application, in your terminal:
 
 - pip3
 
+## Bugs
+-Payperclip does not work - therefore copy credentials does not function
+
 ## Reference
 
 1. official python documentation <a href="https://docs.python.org/3/">docs</a>
