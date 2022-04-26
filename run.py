@@ -229,6 +229,7 @@ def main():
                             for cred in disp_creds():
                                 
                                 print("_"*20)
+                                print(" Account Name\t\t  Username\t\t Password")
                                 print(f"{cred.site_name}\t\t{cred.username}\t\t{cred.password}")
                                 print("\n")
                                 
