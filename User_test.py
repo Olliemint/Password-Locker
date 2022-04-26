@@ -1,151 +1,49 @@
-import pyperclip
 import unittest
-
-from User import User  # Importing the User and Credentials class
-
-
+from user import User
 
 class TestUser(unittest.TestCase):
     
-    '''
-    Test class that defines test cases for the User class behaviours.
-
-    Args:
-        unittest.TestCase: TestCase class that helps in creating test cases
-    '''
     
     def setUp(self):
+        '''
+        set up method to run before each test
+        create a new user before any test
+        '''
+        self.new_user = User("charity",'qwertyip')
         
-        '''
-        Set up method to run before each test cases.
-        '''
-        self.new_user = User("user001","2580")   # create new object
-
-
-    
-    def tearDown(self):
-            '''
-            tearDown method that does clean up after each test case has run.
-            '''
-            User.user_list= []
-    
-    
-    
-    
+        
     
     def test_init(self):
-        
         '''
-        test_init test case to test if the object is initialized properly
+        test_init to test if the object is initialized properly
+    
         '''
-        
-        self.assertEqual(self.new_user.username,"user001")
-        self.assertEqual(self.new_user.password,"2580") 
-        
-        
-    def test_add_new_user(self):
-        
+        self.assertEqual(self.new_user.username,"charity")
+        self.assertEqual(self.new_user.password,"qwertyip")
+      
+      
+    
+    def test_save_user(self):
         '''
-        test_add_new_user test case to test if the contact object is saved into
-         the user list
+        unit test to test if a user has been saved successfully
+        ''' 
+        self.new_user.save_user()
+        self.assertEqual(len(User.users),1)
+        
+    def tearDown(self):
         '''
-        
-        self.new_user.add_new_user()  #saving new user
-        
-        self.assertEqual(len(User.user_list),1)
-        
-        
-    def test_add_multiple_users(self):
-        
-        """
-        check if we can save multiple user data
-        """   
-        
-        self.new_user.add_new_user()
-        
-        test_user = User("Test101","5656")
-        
-        test_user.add_new_user()
-        
-        self.assertEqual(len(User.user_list),2) 
-        
-        
-        
-    def test_delete_contact(self):
-        
-        """
-        testing id we can delete user
-        
-        """ 
-        
-        self.new_user.add_new_user()
-        
-        test_user = User("Test101","5656")
-        
-        test_user.add_new_user()
-        
-        self.new_user.delete_user()
-        self.assertEqual(len(User.user_list),1)
-        
-        
-    def test_view_user_details(self):
-        
+         clean users array after every test
         '''
-        method that returns a list of all contacts saved
-        '''
+        User.users = []
         
-        self.assertEqual(User.view_user_details(),User.user_list) 
-        
-        
-    # def test_find_user_details(self):
-    #     '''
-    #     test to check if we can find a user by username and display information
-    #     '''
-        
-    #     self.new_user.add_new_user()
-        
-    #     test_user = User("Test101","5656")
-        
-    #     test_user.add_new_user()
-        
-    #     found_username = User.find_user_details("Test101")
-        
-    #     self.assertEqual(found_username.password,test_user.password)
-        
-        
-        
-        
-    # def test_copy_data(self):
-    #     '''
-    #     Test to confirm that we are copying the email address from a found contact
-    #     '''
-
-    #     self.new_user.add_new_user()
-        
-    #     User.copy_data("Test101")
-    #     # User.copy_data("5656")
+    def test_remove_user(self):
+        self.new_user.save_user()
+        test_user = User("nyanchera","12345")
+        test_user.save_user()
+        self.new_user.remove_user()
+        self.assertEqual(len(User.users),1)
+    
 
 
-    #     self.assertEqual(self.new_user.username,pyperclip.paste())    
-    #     self.assertEqual(self.new_user.password,pyperclip.paste())    
-
-        
-               
-        
-         
-        
-        
-             
-        
-        
-        
-        
-        
-        
-        
-        
 if __name__ == '__main__':
-    unittest.main()           
-    
-    
-
+    unittest.main()
